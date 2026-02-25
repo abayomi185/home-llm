@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "home-llm"
+version = "0.1.0"
+description = "Tooling and utilities for running, testing and interacting with LLMs in a homelab"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = [
+    "click>=8.1",
+    "paramiko>=3.4",
+    "pydantic>=2.0",
+    "pydantic-settings>=2.0",
+    "rich>=13.0",
+    "tomli>=2.0; python_version < '3.11'",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-mock>=3.0",
+]
+
+[project.scripts]
+home-llm = "home_llm.cli:cli"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["home_llm*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

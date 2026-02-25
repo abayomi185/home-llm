@@ -1,3 +1,20 @@
+Metadata-Version: 2.4
+Name: home-llm
+Version: 0.1.0
+Summary: Tooling and utilities for running, testing and interacting with LLMs in a homelab
+License: MIT
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: click>=8.1
+Requires-Dist: paramiko>=3.4
+Requires-Dist: pydantic>=2.0
+Requires-Dist: pydantic-settings>=2.0
+Requires-Dist: rich>=13.0
+Requires-Dist: tomli>=2.0; python_version < "3.11"
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: pytest-mock>=3.0; extra == "dev"
+
 # home-llm
 
 > Tooling and utilities for running, testing, and interacting with LLMs running remotely in your homelab.
